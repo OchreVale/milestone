@@ -1,5 +1,5 @@
 import flask
-import rando
+import random
 app = flask.Flask(__name__)
 
 # set up a separate route to serve the index.html file generated
@@ -18,12 +18,12 @@ def index():
     # NB: DO NOT add an "index.html" file in your normal templates folder
     # Flask will stop serving this React page correctly
     return flask.render_template("index.html")
-@bp.route("/home")
+@bp.route("/home", methods =["POST", "GET"])
 def Home():
     facts = [
          "I am a man.",
-         "random fact 2",
-         "random fact 3"
+         "I am fluent in 3 languages.",
+         "I love playing chess on my free time."
      ]
     random_choice = random.choice(facts)
     return flask.jsonify({"fact":random_choice})

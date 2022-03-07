@@ -10,7 +10,10 @@ function App() {
       "content-type":"application/json",
     }})
     .then(response =>response.json())
-    .then(data =>{setFact(data)})
+    .then(data => (setFact(data["fact"])))
+  }
+  let embedding = (link) =>{
+    
   }
   return (
     <div>

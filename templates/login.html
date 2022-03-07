@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log in</title>
+        <link rel="stylesheet" href ="{{url_for('static', filename = 'style_form.css')}}">
+    </head>
+    <body>
+        <form  action ="/validate" method="post">
+            <label>Email address</label><br>
+            <input type = "text" size="30" id="textarea" name = "email" required><br>
+            <label>Enter password</label>
+            <br>
+            <br>
+                {% with messages = get_flashed_messages()%}
+                {%if messages%}
+                {%for message in messages%}
+                <label class = "flashes">{{message}}</label>
+                {%endfor%}
+                {%endif%}
+                {%endwith%}
+                <br>
+            <input type="password" size="30" id="textarea" name = "password" required><br>
+            <a href="/signup">Don't have an account? Sign up</a>
+            <input size="20" id ="submit" type ="submit", value="Log in">
+            </form>
+    </body>
+</html>

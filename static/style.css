@@ -1,0 +1,33 @@
+body{
+    background-image: url("form.png");
+    background-repeat: no-repeat;
+    font-family: 'Arial';
+    font-size: 14pt;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: dimgrey;
+}
+img{
+    margin:0%;
+    width: 45%;
+    height:20%;
+    border-image: 0%;
+}
+h2{
+    text-align: center;
+}
+a{
+    align-self: center;
+}
+h4{
+    margin-top: 2%;
+
+}
+#column{
+    align-content: center;
+    float: left;
+    width: 25%;
+}
+nav{
+    text-align: center;
+}

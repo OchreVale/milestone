@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Search Movie
+        </title>
+        <link rel="stylesheet" href ="{{url_for('static', filename = 'style_form.css')}}">
+        <link rel = "icon" type="image/x-icon" href="{{url_for('static', filename='Icon.png')}}">
+    </head>
+    <body>
+        <h2>Search a movie</h2>
+        <form  action ="/Home" method="post">
+            
+        <input type = "text" size="30" id="textarea" name = "movie" required><br>
+        <input size="20" id ="submit" type ="submit", value="submit">
+        </form>
+    </body>
+</html>

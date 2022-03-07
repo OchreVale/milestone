@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{name}}</title>
+        <link rel="stylesheet" href ="{{url_for('static', filename = 'style_review.css')}}">
+    </head>
+    <body>
+        <h2>{{name}}: {{score}}/10</h2>
+        <div class="embedding">
+        {%if link != None%}
+        <iframe width="560" height="315" src="{{link}}"
+        title="YouTube video player" frameborder="0" allow="accelerometer; 
+        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+        {%else%}
+        <img width="250" height="300" src="{{path}}">
+        {%endif%}
+        </div>
+        <div class ="form">
+            <form action="{{redirect_back}}" method ="post">
+                <label for="comments">Review this movie</label><br>
+                <textarea name = "comments", type="text" required class = "text"></textarea><br>
+                <label>Rate this movie</label><br>
+                <input name = "rating" type = "number", min="1", max="10" required class ="rating"><br>
+                <input type ="submit" value = "Add comments">
+            </form>
+        </div>
+            {%for i in range(len_):%}
+            <div class = "message">
+                <div class = "col">
+                    <div class = "row">
+                        {%if current_user_id == user_ids[i]:%}
+                        <div class ="comment">
+                           <p>{{comments[i]}}</p>
+                           <form action="/delete?cid={{comments_ids[i]}}&name={{name}}&id={{mid}}&path={{path}}" method="post">
+                               <input type="submit" value="delete"/>
+                           </form> 
+                        {%else%}
+                        <div class="comment">
+                            <p>{{comments[i]}}</p>
+                        </div>
+                        {%endif%}
+                     </div>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+    </body>
+</html>

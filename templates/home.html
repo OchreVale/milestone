@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{search}}</title>
+        <link rel="stylesheet" href ="{{url_for('static', filename = 'style.css')}}">
+        <link rel = "icon" type="image/x-icon" href="{{url_for('static', filename='results.jpg')}}">
+    </head>
+    <body>
+        <nav><a href="/"> Search again</a></nav>
+            <h2>Showing results for &quot;{{search}}&quot;</h2>
+            {% for i in range(length)%}
+        <div id = "column">
+            {% if YouTube[i] != None%}
+                <a href="{{YouTube[i]}}&path={{image[i]}}"><img alt={{title[i]}} src = {{image[i]}}></a>
+            {%else%}
+                <img alt={{title[i]}} src = {{image[i]}}>
+            {%endif%}
+        {%if link[i] != '/Home'%}
+            <a href = "{{link[i]}}"><h4>{{title[i]}}</h4></a>
+        {%else%}
+        <h4>{{title[i]}}</h4>
+            {%endif%}
+        </div>
+            {% endfor %}
+    </body>
+</html>

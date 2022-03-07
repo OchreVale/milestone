@@ -1,0 +1,33 @@
+body{
+    margin:25%;
+    background-image: url("form.png");
+    font-family: 'Arial';
+    font-size: 14pt;
+    background-color: dimgrey;
+}
+form{
+    float: right;
+}
+input{
+    height:1cm
+}
+h2{
+    float:center;
+    margin-left: 64%;
+    color:rgb(204, 83, 168);
+}
+#submit{
+    background-color:skyblue;
+    align-self: center;
+    margin-left: 40%;
+    font-family: 'Arial';
+    font-size: 12pt;
+
+}
+#textarea{
+    font-family: 'Times New Roman';
+    font-size: 12pt;   
+}
+#flashes{
+    color:red
+}
