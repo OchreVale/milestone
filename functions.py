@@ -16,7 +16,7 @@ def fetch_yt(word:str)->str:
     '''
     url = "http://api.themoviedb.org/3/movie/"+word+"/videos?"
     query_args = {
-    "api_key":os.getenv("TMDB_KEY"),
+        "api_key":os.getenv("TMDB_KEY"),
     }
     response_ = requests.get(url, params= query_args)
     try:
@@ -33,9 +33,9 @@ def fetch_wiki(term:str)->str:
     '''
     wiki_url = "https://en.wikipedia.org/w/api.php"
     wiki_params = {
-    "action": "query",
-    "titles":term,
-    "format":"json",
+        "action": "query",
+        "titles":term,
+        "format":"json",
     }
     output = requests.get(wiki_url, wiki_params)
     pageid= list(output.json()['query']['pages'])[0]
