@@ -1,4 +1,5 @@
-The environment basis for this program requires that a few python libraries must be installed to run. In addition to the os in-built python library, the program requires dotenv, flask, flask_sqlalchemy, flask_login, werkzeug and requests libraries. Flask and requests can be installed in the terminal using the commands "pip install libray_name", all in lowercase. Dotenv is installed using "pip install python-dotenv". In addition to all those libraries, you must also install heroku in your terminal. Since milestone 3 requires using JS's React library, you need to install npm and npx.
+The environment for this program requires that a few python libraries must be installed to run. In addition to the os in-built python library, the program requires dotenv, flask, flask_sqlalchemy, flask_login, werkzeug and requests libraries. Flask and requests can be installed in the terminal using the commands "pip install libray_name", all in lowercase. Dotenv is installed using "pip install python-dotenv". In addition to all those libraries, you must also install heroku in your terminal.
+
 
 You must create an .env file in the current directory. The .env file contains important information without which your app won't be running. In the env. for this project, you must create a TMDB_KEY variable and associate it with your TMDB API key, create DATABASE_URL variable and associated with a postgresql database link, and finally you must create a session_key variable and associate it with any random string that you can use as your key. Reminder that all these variables are string variables so they must be enclosed in quotation marks.
 
@@ -6,6 +7,7 @@ Now to run the code locally, modify main.py by removing the first and the second
 
 Click on the link below the image to see the movie's wikipedia page, and click the poster image to navigate to the review page where you can leave a comment and a rating for the movie you clicked on. It is to note that all the comment and running submitted by the same user after their first comment will only replace that user's first comment. So, with one account, you can't leave two comments for the same movie. These comments will be replacing themselves.
 
+https://ochremeter.herokuapp.com/
 
 My final submission isn't different from what I wanted to do from the beginning. I wanted an app that allowed users to comment and rate every movie that can be pulled from TMDB. In the end, I think I successfully managed to accomplish just that.
 
