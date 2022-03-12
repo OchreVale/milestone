@@ -10,4 +10,4 @@ The assignment proved a little more difficult than I thought it would be due my 
 
 I had a problem with running the command "npm run build". My system didn't recognize BUILD_PATH as a command or batch file. It turns out I was running it in Powershell while I was supposed to run in bash for my Windows OS.
 
-Then I also need to pass data from the react app to the flask at some point to run into my database. I didn't know how so I googled and found out that window.location.search helps fetch the query part of an url in JS and that it can be helpful in passing parameters across routes.
+Then I also need to pass data from the react app to the flask at some point to run into my database. I didn't know how so I googled and found out that window.location. search helps fetch the query part of an url in JS and that it can be helpful in passing parameters across routes.

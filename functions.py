@@ -11,8 +11,8 @@ def query_pararms(name:str, id_):
 
 def fetch_yt(word:str)->str:
     '''
-    Returns a YouTube a link for the trailer after
-    fetching the trailing video key from The Movie Database.
+        Returns a YouTube a link for the trailer after
+        fetching the trailing video key from The Movie Database.
     '''
     url = "http://api.themoviedb.org/3/movie/"+word+"/videos?"
     query_args = {
